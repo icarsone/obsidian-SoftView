@@ -33,7 +33,7 @@ var MeimaidReaderPlugin = class extends import_obsidian.Plugin {
     this.addRibbonIcon("book-open-text", "Open current note in SoftView", () => {
       const file = this.getActiveMarkdownFile();
       if (!file) {
-        new import_obsidian.Notice("\u8BF7\u5148\u6253\u5F00\u4E00\u7BC7 Markdown \u7B14\u8BB0");
+        new import_obsidian.Notice("Open a Markdown note first.");
         return;
       }
       void this.openReader(file);
@@ -126,7 +126,7 @@ var MeimaidReaderView = class extends import_obsidian.ItemView {
     const actionsEl = toolbarEl.createDiv({ cls: "meimaid-reader-actions" });
     this.backButtonEl = actionsEl.createEl("button", {
       cls: "meimaid-reader-button",
-      text: "\u8FD4\u56DE\u4E0A\u4E00\u7BC7"
+      text: "Back"
     });
     const followLabel = actionsEl.createEl("label", {
       cls: "meimaid-reader-toggle"
@@ -136,12 +136,12 @@ var MeimaidReaderView = class extends import_obsidian.ItemView {
     });
     this.followInputEl.type = "checkbox";
     this.followInputEl.checked = this.followActiveFile;
-    followLabel.createSpan({ text: "\u8DDF\u968F\u5F53\u524D\u7B14\u8BB0" });
+    followLabel.createSpan({ text: "Follow current note" });
     const refreshButton = actionsEl.createEl("button", {
       cls: "meimaid-reader-button meimaid-reader-icon-button",
       attr: {
-        "aria-label": "\u5237\u65B0\u9605\u8BFB\u89C6\u56FE",
-        title: "\u5237\u65B0\u9605\u8BFB\u89C6\u56FE"
+        "aria-label": "Refresh reading view",
+        title: "Refresh reading view"
       }
     });
     (0, import_obsidian.setIcon)(refreshButton, "refresh-cw");
@@ -187,9 +187,9 @@ var MeimaidReaderView = class extends import_obsidian.ItemView {
     this.syncBackButton();
     const file = this.getFile();
     if (!file) {
-      this.setTitleText("\u672A\u9009\u62E9 Markdown \u539F\u6587");
+      this.setTitleText("No Markdown note selected");
       this.articleEl.createEl("p", {
-        text: "\u8BF7\u5148\u6253\u5F00\u4E00\u7BC7 Markdown \u7B14\u8BB0\uFF0C\u518D\u8FD0\u884C SoftView \u547D\u4EE4\u3002"
+        text: "Open a Markdown note first, then run the SoftView command."
       });
       return;
     }
@@ -206,7 +206,7 @@ var MeimaidReaderView = class extends import_obsidian.ItemView {
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       this.articleEl.empty();
-      this.articleEl.createEl("h2", { text: "SoftView \u6E32\u67D3\u5931\u8D25" });
+      this.articleEl.createEl("h2", { text: "SoftView render failed" });
       this.articleEl.createEl("p", { text: message });
       console.error("SoftView render failed", error);
     }
@@ -258,7 +258,7 @@ var MeimaidReaderView = class extends import_obsidian.ItemView {
       await this.navigateToFile(linkedFile);
       return;
     }
-    new import_obsidian.Notice(`\u627E\u4E0D\u5230\u94FE\u63A5\u76EE\u6807\uFF1A${rawTarget}`);
+    new import_obsidian.Notice(`Could not find link target: ${rawTarget}`);
   }
   async navigateToFile(file) {
     var _a, _b;

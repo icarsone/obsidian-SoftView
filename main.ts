@@ -23,7 +23,7 @@ export default class MeimaidReaderPlugin extends Plugin {
       const file = this.getActiveMarkdownFile();
 
       if (!file) {
-        new Notice("请先打开一篇 Markdown 笔记");
+        new Notice("Open a Markdown note first.");
         return;
       }
 
@@ -138,7 +138,7 @@ class MeimaidReaderView extends ItemView {
     const actionsEl = toolbarEl.createDiv({ cls: "meimaid-reader-actions" });
     this.backButtonEl = actionsEl.createEl("button", {
       cls: "meimaid-reader-button",
-      text: "返回上一篇",
+      text: "Back",
     });
 
     const followLabel = actionsEl.createEl("label", {
@@ -149,13 +149,13 @@ class MeimaidReaderView extends ItemView {
     });
     this.followInputEl.type = "checkbox";
     this.followInputEl.checked = this.followActiveFile;
-    followLabel.createSpan({ text: "跟随当前笔记" });
+    followLabel.createSpan({ text: "Follow current note" });
 
     const refreshButton = actionsEl.createEl("button", {
       cls: "meimaid-reader-button meimaid-reader-icon-button",
       attr: {
-        "aria-label": "刷新阅读视图",
-        title: "刷新阅读视图",
+        "aria-label": "Refresh reading view",
+        title: "Refresh reading view",
       },
     });
     setIcon(refreshButton, "refresh-cw");
@@ -211,9 +211,9 @@ class MeimaidReaderView extends ItemView {
 
     const file = this.getFile();
     if (!file) {
-      this.setTitleText("未选择 Markdown 原文");
+      this.setTitleText("No Markdown note selected");
       this.articleEl.createEl("p", {
-        text: "请先打开一篇 Markdown 笔记，再运行 SoftView 命令。",
+        text: "Open a Markdown note first, then run the SoftView command.",
       });
       return;
     }
@@ -232,7 +232,7 @@ class MeimaidReaderView extends ItemView {
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       this.articleEl.empty();
-      this.articleEl.createEl("h2", { text: "SoftView 渲染失败" });
+      this.articleEl.createEl("h2", { text: "SoftView render failed" });
       this.articleEl.createEl("p", { text: message });
       console.error("SoftView render failed", error);
     }
@@ -303,7 +303,7 @@ class MeimaidReaderView extends ItemView {
       return;
     }
 
-    new Notice(`找不到链接目标：${rawTarget}`);
+    new Notice(`Could not find link target: ${rawTarget}`);
   }
 
   async navigateToFile(file: TFile) {

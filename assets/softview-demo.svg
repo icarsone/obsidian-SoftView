@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">SoftView demo screenshot</title>
+  <desc id="desc">A mock Obsidian workspace showing a Markdown note on the left and the same note rendered in SoftView on the right.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#6c5436" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="paper-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaf1"/>
+      <stop offset="1" stop-color="#f6ecdc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1440" height="900" fill="#eef1f6"/>
+  <rect x="0" y="0" width="1440" height="58" fill="#dfe4ee"/>
+  <circle cx="28" cy="29" r="7" fill="#9aa5ba"/>
+  <circle cx="52" cy="29" r="7" fill="#9aa5ba"/>
+  <circle cx="76" cy="29" r="7" fill="#9aa5ba"/>
+  <text x="112" y="36" font-family="Inter, Segoe UI, sans-serif" font-size="17" fill="#4c566d">SoftView demo vault</text>
+
+  <rect x="28" y="88" width="430" height="760" rx="10" fill="#e8edf5" stroke="#cdd5e3"/>
+  <text x="58" y="130" font-family="Inter, Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#657087">Markdown source</text>
+  <text x="58" y="168" font-family="Consolas, SFMono-Regular, monospace" font-size="18" fill="#3f4659"># Seed Report: Gentle Reading</text>
+  <text x="58" y="212" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">One sentence: keep Markdown as the source,</text>
+  <text x="58" y="238" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">but read it in a calmer view.</text>
+  <text x="58" y="292" font-family="Consolas, SFMono-Regular, monospace" font-size="17" fill="#3f4659">## Why it helps</text>
+  <text x="58" y="332" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">- narrower line length</text>
+  <text x="58" y="360" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">- larger body type</text>
+  <text x="58" y="388" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">- softer spacing</text>
+  <text x="58" y="444" font-family="Consolas, SFMono-Regular, monospace" font-size="17" fill="#3f4659">&gt; Reading is a different posture</text>
+  <text x="58" y="472" font-family="Consolas, SFMono-Regular, monospace" font-size="17" fill="#3f4659">&gt; from editing.</text>
+  <text x="58" y="532" font-family="Consolas, SFMono-Regular, monospace" font-size="16" fill="#596173">[[Example linked note]]</text>
+
+  <rect x="498" y="88" width="914" height="760" rx="10" fill="#f3eadc"/>
+  <rect x="524" y="114" width="862" height="60" rx="8" fill="#fffaf1" stroke="#e2d3bf"/>
+  <text x="554" y="152" font-family="Inter, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#2f2924">Seed Report: Gentle Reading.md</text>
+  <rect x="1128" y="128" width="84" height="34" rx="8" fill="#fff6ea" stroke="#decbb4"/>
+  <text x="1157" y="151" font-family="Inter, Segoe UI, sans-serif" font-size="14" fill="#5f4b31">Back</text>
+  <rect x="1226" y="128" width="122" height="34" rx="8" fill="#fff6ea" stroke="#decbb4"/>
+  <text x="1244" y="151" font-family="Inter, Segoe UI, sans-serif" font-size="14" fill="#5f4b31">Follow note</text>
+
+  <rect x="602" y="196" width="708" height="610" rx="8" fill="url(#paper-bg)" stroke="#e2d3bf" filter="url(#shadow)"/>
+  <text x="660" y="270" font-family="Georgia, Times New Roman, serif" font-size="44" font-weight="700" fill="#2f2924">Seed Report: Gentle Reading</text>
+  <text x="660" y="326" font-family="Georgia, Times New Roman, serif" font-size="23" fill="#4d443b">Keep Markdown as the source, but read it in a calmer view.</text>
+
+  <text x="660" y="408" font-family="Georgia, Times New Roman, serif" font-size="30" font-weight="700" fill="#2f2924">Why it helps</text>
+  <circle cx="677" cy="456" r="5" fill="#7b6d5e"/>
+  <text x="700" y="464" font-family="Georgia, Times New Roman, serif" font-size="22" fill="#3b342d">Narrower line length for easier scanning</text>
+  <circle cx="677" cy="504" r="5" fill="#7b6d5e"/>
+  <text x="700" y="512" font-family="Georgia, Times New Roman, serif" font-size="22" fill="#3b342d">Larger body type and relaxed line height</text>
+  <circle cx="677" cy="552" r="5" fill="#7b6d5e"/>
+  <text x="700" y="560" font-family="Georgia, Times New Roman, serif" font-size="22" fill="#3b342d">Softer spacing between paragraphs and blocks</text>
+
+  <rect x="660" y="620" width="568" height="92" rx="8" fill="#f4eadb" stroke="#e1ceb4"/>
+  <rect x="660" y="620" width="5" height="92" rx="2" fill="#b79b70"/>
+  <text x="692" y="658" font-family="Georgia, Times New Roman, serif" font-size="21" fill="#4e443b">Reading is a different posture from editing.</text>
+  <text x="692" y="688" font-family="Georgia, Times New Roman, serif" font-size="21" fill="#4e443b">SoftView keeps the source note untouched.</text>
+
+  <text x="660" y="764" font-family="Inter, Segoe UI, sans-serif" font-size="16" fill="#735b3a">Example linked note</text>
+</svg>
