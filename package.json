@@ -1,0 +1,24 @@
+{
+  "name": "softview",
+  "version": "0.1.0",
+  "description": "A warm focused reading view for the current Markdown note inside Obsidian.",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc --noEmit --skipLibCheck && esbuild main.ts --bundle --external:obsidian --format=cjs --target=es2018 --outfile=main.js",
+    "dev": "esbuild main.ts --bundle --external:obsidian --format=cjs --target=es2018 --outfile=main.js --watch"
+  },
+  "keywords": [
+    "obsidian",
+    "reader",
+    "markdown"
+  ],
+  "author": "SoftView",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "builtin-modules": "^3.3.0",
+    "esbuild": "^0.28.0",
+    "obsidian": "^1.5.12",
+    "typescript": "^5.4.2"
+  }
+}

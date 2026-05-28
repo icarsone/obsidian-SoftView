@@ -1,0 +1,10 @@
+{
+  "id": "softview",
+  "name": "SoftView",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Open the current Markdown note in a warm, focused reading view inside Obsidian.",
+  "author": "SoftView",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
