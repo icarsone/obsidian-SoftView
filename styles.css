@@ -169,13 +169,11 @@
 
 .meimaid-reader-article a {
   color: var(--reader-link);
-  text-decoration-color: rgba(115, 91, 58, 0.36);
   text-underline-offset: 0.18em;
 }
 
 .meimaid-reader-article a:hover {
   color: #4f3f29;
-  text-decoration-color: currentColor;
 }
 
 .meimaid-reader-article strong {
