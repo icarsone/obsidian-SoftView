@@ -59,16 +59,6 @@ Then restart Obsidian or reload community plugins, and enable `SoftView`.
 5. Turn on `Follow current note` if you want SoftView to update when you switch notes.
 6. Click internal links to move through your notes inside SoftView, then use `Back` to return.
 
-## Release Requirements
-
-For every release:
-
-1. Update `manifest.json` to a semantic version in `x.y.z` format.
-2. Update `versions.json`.
-3. Build the plugin.
-4. Create a GitHub release whose tag matches the version in `manifest.json`.
-5. Upload `main.js`, `manifest.json`, and `styles.css` as release assets.
-
 ## Development
 
 ```bash
